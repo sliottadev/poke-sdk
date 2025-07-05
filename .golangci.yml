@@ -1,0 +1,31 @@
+run:
+  timeout: 5m
+  issues-exit-code: 1
+  tests: true
+
+linters-settings:
+  errcheck:
+    ignore: "fmt.Errorf"
+  goimports:
+    local-prefixes: github.com/sliottadev/poke-sdk
+  unused:
+    check-exported: false
+
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - goimports
+    - revive
+    - stylecheck
+    - unparam
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0 
